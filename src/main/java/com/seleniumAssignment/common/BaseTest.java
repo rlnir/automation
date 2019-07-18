@@ -4,7 +4,9 @@ package com.seleniumAssignment.common;
 import com.seleniumAssignment.utils.ProjectTestProps;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
@@ -13,7 +15,7 @@ public abstract class BaseTest {
 
     protected WebDriver driver;
 
-    @BeforeTest
+    @BeforeMethod(alwaysRun = true)
     @Step
     public void setUp() {
         String browserName = ProjectTestProps.getBrowserName();
@@ -23,7 +25,7 @@ public abstract class BaseTest {
         driver.manage().deleteAllCookies();
     }
 
-    @AfterTest
+    @AfterMethod(alwaysRun = true)
     @Step
     public void endSession() throws Exception {
         driver.quit();
