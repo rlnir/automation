@@ -2,6 +2,7 @@ package com.seleniumAssignment.common;
 
 
 import com.seleniumAssignment.utils.ProjectTestProps;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -13,6 +14,7 @@ public abstract class BaseTest {
     protected WebDriver driver;
 
     @BeforeTest
+    @Step
     public void setUp() {
         String browserName = ProjectTestProps.getBrowserName();
         driver = DriverFactory.getBrowser(browserName);
@@ -21,6 +23,7 @@ public abstract class BaseTest {
     }
 
     @AfterTest
+    @Step
     public void endSession() throws Exception {
         driver.quit();
     }
