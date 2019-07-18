@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class EditTodoTest extends BaseTest {
 
-    @Test
+    @Test(groups = {"sanity"})
     public void editItemTest() throws InterruptedException {
 
         int todoItemsToAdd = 3;

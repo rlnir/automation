@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class ClearCompletedTodoItemsTest extends BaseTest {
 
-    @Test
+    @Test(groups = {"sanity"})
     public void clearCompletedTest() throws InterruptedException {
 
         int todoItemsToAdd = 10;

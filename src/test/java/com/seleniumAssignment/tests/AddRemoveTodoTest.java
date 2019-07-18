@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class AddRemoveTodoTest extends BaseTest {
 
-    @Test
+    @Test(groups = {"sanity"})
     public void addAndRemoveItemTest() throws InterruptedException {
 
         int todoItemsToAdd = 10;

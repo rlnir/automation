@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class PersistenceTest extends BaseTest {
 
-    @Test
+    @Test(groups = {"sanity"})
     public void listSavedUponNavigationTest() throws InterruptedException {
 
         int todoItemsToAdd = 5;
