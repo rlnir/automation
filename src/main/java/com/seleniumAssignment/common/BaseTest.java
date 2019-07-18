@@ -20,6 +20,7 @@ public abstract class BaseTest {
         driver = DriverFactory.getBrowser(browserName);
 
         driver.manage().timeouts().implicitlyWait(Wait.EXPLICIT_WAIT, TimeUnit.SECONDS);
+        driver.manage().deleteAllCookies();
     }
 
     @AfterTest

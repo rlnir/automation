@@ -30,4 +30,9 @@ public class HomePage extends BasePage {
     public String getPagePath() {
         return PAGE_PATH;
     }
+
+    @Override
+    public BasePage previousPage() {
+        return null;
+    }
 }

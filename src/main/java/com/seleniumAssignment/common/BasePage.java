@@ -22,11 +22,11 @@ public abstract class BasePage {
         this.driver = driver;
     }
 
-    protected void waitForElement(WebElement el) {
+    public void waitForElement(WebElement el) {
         new WebDriverWait(driver, Wait.EXPLICIT_WAIT).until(ExpectedConditions.visibilityOf(el));
     }
 
-    protected void waitForElementWithText(WebElement el, String str) {
+    public void waitForElementWithText(WebElement el, String str) {
         new WebDriverWait(driver, Wait.EXPLICIT_WAIT).until(ExpectedConditions.textToBePresentInElement(el, str));
     }
 
@@ -40,4 +40,12 @@ public abstract class BasePage {
     public void goTo() {
         driver.get(getPageUrl());
     }
+
+    @Step
+    public BasePage clickBack(){
+        driver.navigate().back();
+        return previousPage();
+    }
+
+    public abstract BasePage previousPage();
 }

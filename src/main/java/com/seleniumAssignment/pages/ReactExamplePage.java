@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class ReactExamplePage extends BasePage {
+public class ReactExamplePage extends BasePage implements ITodoPage {
 
 
     @FindBy(className = "new-todo")
@@ -19,10 +19,10 @@ public class ReactExamplePage extends BasePage {
     WebElement completedList;
 
     @FindBy(linkText = "Active")
-    WebElement ActiveList;
+    WebElement activeList;
 
     @FindBy(linkText = "All")
-    WebElement AllList;
+    WebElement allList;
 
     @FindBy(className = "clear-completed")
     private WebElement clearCompleted;
@@ -38,6 +38,7 @@ public class ReactExamplePage extends BasePage {
     }
 
     @Step
+    @Override
     public void addTodoItem(String text) {
         newTodo.click();
         newTodo.sendKeys(text);
@@ -46,6 +47,7 @@ public class ReactExamplePage extends BasePage {
     }
 
     @Step
+    @Override
     public void removeTodoItem(int idx) {
 
         if (getTodoListLength() > idx) {
@@ -56,6 +58,7 @@ public class ReactExamplePage extends BasePage {
     }
 
     @Step
+    @Override
     public void markTodoItem(int idx) {
 
         if (getTodoListLength() > idx) {
@@ -67,6 +70,17 @@ public class ReactExamplePage extends BasePage {
         }
     }
 
+    @Override
+    public String getItemText(int idx) {
+
+        if (getTodoListLength() > idx) {
+            List<WebElement> elements = driver.findElements(By.cssSelector("div[class=view]>label"));
+            return elements.get(idx).getText();
+        }
+        return null;
+    }
+
+    @Override
     public void editItem(int idx, String text) {
         if (getTodoListLength() > idx) {
             List<WebElement> elements = driver.findElements(By.cssSelector("div[class=view]>label"));
@@ -86,6 +100,7 @@ public class ReactExamplePage extends BasePage {
         }
     }
 
+    @Override
     @Step
     public int getTodoListLength() {
 //        WebElement element = driver.findElement(By.className("todo-list"));
@@ -96,6 +111,7 @@ public class ReactExamplePage extends BasePage {
 
     }
 
+    @Override
     @Step
     public int getCountText() {
         if (getTodoListLength() > 0) {
@@ -106,11 +122,13 @@ public class ReactExamplePage extends BasePage {
         return 0;
     }
 
+    @Override
     @Step
     public void toggleAllItems() {
         toggleAll.click();
     }
 
+    @Override
     @Step
     public void clickOnClearCompleted() {
         clearCompleted.click();
@@ -119,5 +137,24 @@ public class ReactExamplePage extends BasePage {
     @Override
     public String getPagePath() {
         return PAGE_PATH;
+    }
+    @Override
+    public HomePage previousPage(){
+        return new HomePage(driver);
+    }
+
+    @Override
+    public void filterCompleted(){
+        completedList.click();
+    }
+
+    @Override
+    public void filterActive(){
+        activeList.click();
+    }
+
+    @Override
+    public void filterAll(){
+        allList.click();
     }
 }
