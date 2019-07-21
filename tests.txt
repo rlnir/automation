@@ -6,20 +6,22 @@ sanity tests todo list
 - remove todo item (first / last / middle)
 - mark todo as completed
 - edit todo item
+- when editing item and erasing all text item is removed
 - check for bottom counter updates when adding/removing
 - check for special characters in todo item
 - check different languages in todo items
 - clear completed removes completed items
+- clear completed appears only when items is marked as completed
 - marks all items as completed
 - All / Active / Completed filters show corresponding items
-- items list is persisted upon navigation / refresh
+- items list is persisted upon navigation / refresh / browser restart
 - no js errors
 
 - test on different browsers / resolutions
 - test on different Platforms / Mobile Devices
 
 more tests aspects (not for sanity):
-
+- localStorage is full / disabled
 - security: xss
 - performance: load, stress
 - usability
