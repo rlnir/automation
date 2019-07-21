@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 public class EditTodoTest extends BaseTest {
 
+    // test edit item functionality
+
     @Test(groups = {"sanity"})
     public void editItemTest() throws InterruptedException {
 

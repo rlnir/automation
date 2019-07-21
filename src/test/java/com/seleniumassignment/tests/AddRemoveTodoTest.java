@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 public class AddRemoveTodoTest extends BaseTest {
 
+    // test add and remove functions
+
     @Test(groups = {"sanity"})
     public void addAndRemoveItemTest() throws InterruptedException {
 

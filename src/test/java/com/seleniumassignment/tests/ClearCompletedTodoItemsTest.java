@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 public class ClearCompletedTodoItemsTest extends BaseTest {
 
+    // test clear completed todos function
+
     @Test(groups = {"sanity"})
     public void clearCompletedTest() throws InterruptedException {
 

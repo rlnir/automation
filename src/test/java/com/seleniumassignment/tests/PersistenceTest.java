@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 public class PersistenceTest extends BaseTest {
 
+    // test persistence upon navigation
+
     @Test(groups = {"sanity"})
     public void listSavedUponNavigationTest() throws InterruptedException {
 
@@ -28,8 +30,11 @@ public class PersistenceTest extends BaseTest {
             reactExamplePage.addTodoItem("to do " + i);
         }
 
+        // navigate off todos page
         homePage.goTo();
 
+
+        // navigate back to  page
         reactExamplePage = homePage.clickOnReact();
 
         int todoListLength = reactExamplePage.getTodoListLength();

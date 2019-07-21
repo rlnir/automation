@@ -8,8 +8,10 @@ import org.testng.annotations.Test;
 
 public class FilterTodoItemsTest extends BaseTest {
 
-    int todoItemsToAdd = 10;
-    int todoItemsToMark = 6;
+    private int todoItemsToAdd = 10;
+    private int todoItemsToMark = 6;
+
+    // test active filter
 
     @Test(groups = {"sanity"})
     public void filterActiveTest() {
@@ -30,6 +32,7 @@ public class FilterTodoItemsTest extends BaseTest {
             reactExamplePage.markTodoItem(i);
         }
 
+        // click filter
         reactExamplePage.filterActive();
 
         int todoListLength = reactExamplePage.getTodoListLength();
@@ -41,6 +44,8 @@ public class FilterTodoItemsTest extends BaseTest {
         //assert counter
         Assert.assertEquals(countText, todoItemsToAdd - todoItemsToMark, "counter should show different number");
     }
+
+    // test completed filter
 
     @Test(groups = {"sanity"})
     public void filterCompletedTest() throws InterruptedException {
@@ -60,6 +65,7 @@ public class FilterTodoItemsTest extends BaseTest {
             reactExamplePage.markTodoItem(i);
         }
 
+        // click filter
         reactExamplePage.filterCompleted();
 
         int todoListLength = reactExamplePage.getTodoListLength();

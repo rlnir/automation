@@ -50,7 +50,7 @@ public class ReactExamplePage extends BasePage implements ITodoPage {
     public void removeTodoItem(int idx) {
 
         if (getTodoListLength() > idx) {
-            ((JavascriptExecutor) driver).executeScript("document.querySelector('.destroy').click();");
+            WebDriverUtils.executeJs(driver, "document.querySelector('.destroy').click();");
         } else {
             System.out.println("cannot remove item that its index is bigger than list size");
         }
@@ -137,23 +137,27 @@ public class ReactExamplePage extends BasePage implements ITodoPage {
     public String getPagePath() {
         return PAGE_PATH;
     }
+
     @Override
-    public HomePage previousPage(){
+    public HomePage previousPage() {
         return new HomePage(driver);
     }
 
     @Override
-    public void filterCompleted(){
+    @Step
+    public void filterCompleted() {
         completedList.click();
     }
 
     @Override
-    public void filterActive(){
+    @Step
+    public void filterActive() {
         activeList.click();
     }
 
     @Override
-    public void filterAll(){
+    @Step
+    public void filterAll() {
         allList.click();
     }
 }
