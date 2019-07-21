@@ -14,8 +14,8 @@ for example, you can choose browser by: browser=chrome or browser=firefox.
 ## BrowserStack integration
 if you would like to run your test on your Browserstack account you need edit these properties in TestProps.properties file:
 - isBrowserStack=true
-- browserStack.User=<<your user>>
-- browserStack.Key=<<your key>>
+- browserStack.User=[-your user-]
+- browserStack.Key=[-your key-]
 
 ## Running Tests
 1. find sanity.xml file in root.
