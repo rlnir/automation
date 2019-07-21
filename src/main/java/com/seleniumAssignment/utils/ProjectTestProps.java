@@ -5,30 +5,30 @@ import com.seleniumassignment.common.TestProps;
 public class ProjectTestProps {
 
     public static String getBrowserName() {
-        return TestProps.get("browserName");
+        return getProp("browserName");
     }
 
     public static String getBaseUrl() {
-        return TestProps.get("baseUrl");
-    }
-
-    public static String getChromeDriverVersion() {
-        return TestProps.get("chromeDriverVersion");
+        return getProp("baseUrl");
     }
 
     public static boolean isBrowserStack() {
-        return TestProps.get("isBrowserStack").equals("true");
+        return getProp("isBrowserStack").equals("true");
     }
 
     public static String getBrowserStackUser() {
-        return TestProps.get("browserStackUser");
+        return getProp("browserStack.User");
     }
 
     public static String getBrowserStackKey() {
-        return TestProps.get("browserStackKey");
+        return getProp("browserStack.Key");
     }
 
     public static String getBrowserStackHub() {
-        return TestProps.get("browserStackHub");
+        return getProp("browserStack.Hub");
+    }
+
+    private  static String getProp(String prop) {
+        return System.getProperty(prop, TestProps.get(prop));
     }
 }
