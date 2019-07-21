@@ -2,16 +2,25 @@ sanity tests todo list
 
 - add todo item
 - add multiple todos
-- remove todo item
+- add empty todo item
+- remove todo item (first / last / middle)
 - mark todo as completed
 - edit todo item
 - check for bottom counter updates when adding/removing
 - check for special characters in todo item
+- check different languages in todo items
 - clear completed removes completed items
 - marks all items as completed
 - All / Active / Completed filters show corresponding items
 - items list is persisted upon navigation / refresh
+- no js errors
 
 - test on different browsers / resolutions
 - test on different Platforms / Mobile Devices
+
+more tests aspects (not for sanity):
+
+- security: xss
+- performance: load, stress
+- usability
 
