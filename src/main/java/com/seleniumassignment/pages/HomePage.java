@@ -1,6 +1,6 @@
-package com.seleniumAssignment.pages;
+package com.seleniumassignment.pages;
 
-import com.seleniumAssignment.common.BasePage;
+import com.seleniumassignment.common.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

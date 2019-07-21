@@ -1,10 +1,9 @@
-package com.seleniumAssignment.pages;
+package com.seleniumassignment.pages;
 
-import com.seleniumAssignment.common.BasePage;
-import com.seleniumAssignment.common.WebDriverUtils;
+import com.seleniumassignment.common.BasePage;
+import com.seleniumassignment.utils.WebDriverUtils;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;

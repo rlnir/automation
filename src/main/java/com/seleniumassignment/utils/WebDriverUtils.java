@@ -1,4 +1,4 @@
-package com.seleniumAssignment.common;
+package com.seleniumassignment.utils;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

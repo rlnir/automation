@@ -1,8 +1,8 @@
-package com.seleniumAssignment.tests;
+package com.seleniumassignment.tests;
 
-import com.seleniumAssignment.common.BaseTest;
-import com.seleniumAssignment.pages.HomePage;
-import com.seleniumAssignment.pages.ReactExamplePage;
+import com.seleniumassignment.common.BaseTest;
+import com.seleniumassignment.pages.HomePage;
+import com.seleniumassignment.pages.ReactExamplePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

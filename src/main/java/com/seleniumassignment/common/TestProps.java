@@ -1,4 +1,4 @@
-package com.seleniumAssignment.common;
+package com.seleniumassignment.common;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;

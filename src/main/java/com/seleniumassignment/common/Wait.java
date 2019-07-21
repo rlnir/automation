@@ -1,4 +1,4 @@
-package com.seleniumAssignment.common;
+package com.seleniumassignment.common;
 
 public interface Wait {
     int EXPLICIT_WAIT = 90;

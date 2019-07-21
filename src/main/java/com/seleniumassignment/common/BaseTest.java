@@ -1,13 +1,12 @@
-package com.seleniumAssignment.common;
+package com.seleniumassignment.common;
 
 
-import com.seleniumAssignment.utils.ProjectTestProps;
+import com.seleniumassignment.utils.ProjectTestProps;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,7 +18,12 @@ public abstract class BaseTest {
     @Step
     public void setUp() {
         String browserName = ProjectTestProps.getBrowserName();
-        driver = DriverFactory.getBrowser(browserName);
+        if (ProjectTestProps.isBrowserStack()) {
+            driver = DriverFactory.getBrowserStackDriver(browserName);
+        }
+        else {
+            driver = DriverFactory.getBrowserDriver(browserName);
+        }
 
         driver.manage().timeouts().implicitlyWait(Wait.EXPLICIT_WAIT, TimeUnit.SECONDS);
         driver.manage().deleteAllCookies();

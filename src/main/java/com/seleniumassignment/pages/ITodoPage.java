@@ -1,4 +1,4 @@
-package com.seleniumAssignment.pages;
+package com.seleniumassignment.pages;
 
 import io.qameta.allure.Step;
 

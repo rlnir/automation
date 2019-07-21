@@ -1,6 +1,6 @@
-package com.seleniumAssignment.common;
+package com.seleniumassignment.common;
 
-import com.seleniumAssignment.utils.ProjectTestProps;
+import com.seleniumassignment.utils.ProjectTestProps;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
