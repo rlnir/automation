@@ -10,7 +10,7 @@
     </groups>
     <test name="sanity">
         <packages>
-            <package name="com.seleniumAssignment.*"/>
+            <package name="com.seleniumassignment.*"/>
         </packages>
     </test>
 </suite>
