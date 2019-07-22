@@ -23,7 +23,7 @@ if you would like to run your test on your Browserstack account you need edit th
 2. run file as TestNG suite (usually right click on file -> run).
 
 ## Parallel Tests
-test can run in parallel if adding following attributes TestNg xml file (by default it's like that):
+tests can run in parallel if adding following attributes in TestNG xml file (by default it's like that):
 ```
 thread-count="3" parallel="classes"
 ```
