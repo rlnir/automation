@@ -9,7 +9,8 @@ you may find list of test cases [here](https://github.com/rlnir/automation/blob/
 
 ## Test Properties 
 you may modify test properties in TestProps.properties file.
-for example, you can choose browser by: browser=chrome or browser=firefox.
+for example, you can choose browser by: "browser=chrome" or "browser=firefox".
+in addition, you can pass properties as Java options in command line, for example "-Dbrowser=firefox -DisBrowserStack=true". this can help you parametrize tests when using job runner such as Jenkins.
 
 ## BrowserStack integration
 if you would like to run your test on your Browserstack account you need edit these properties in TestProps.properties file:
